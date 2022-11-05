@@ -56,15 +56,47 @@
 		5064E1902916B40B002218DB /* TableViews */ = {
 			isa = PBXGroup;
 			children = (
-				5064E1912916B40B002218DB /* AppDelegate.swift */,
-				5064E1932916B40B002218DB /* SceneDelegate.swift */,
-				5064E1952916B40B002218DB /* ViewController.swift */,
+				5064E1A82916B42D002218DB /* Models */,
+				5064E1A72916B429002218DB /* Views */,
+				5064E1A52916B415002218DB /* Supporting Files */,
+				5064E1A62916B423002218DB /* Controllers */,
 				5064E1972916B40B002218DB /* Main.storyboard */,
 				5064E19A2916B40C002218DB /* Assets.xcassets */,
-				5064E19C2916B40C002218DB /* LaunchScreen.storyboard */,
 				5064E19F2916B40C002218DB /* Info.plist */,
 			);
 			path = TableViews;
+			sourceTree = "<group>";
+		};
+		5064E1A52916B415002218DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5064E1912916B40B002218DB /* AppDelegate.swift */,
+				5064E1932916B40B002218DB /* SceneDelegate.swift */,
+				5064E19C2916B40C002218DB /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5064E1A62916B423002218DB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5064E1952916B40B002218DB /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5064E1A72916B429002218DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5064E1A82916B42D002218DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
