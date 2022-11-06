@@ -6,9 +6,7 @@ class TableWithCustomCells: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let nib = UINib(nibName: "CustomCell", bundle: nil)
-        table?.register(nib, forCellReuseIdentifier: "CustomCell")
+    
         table?.dataSource = self
         table?.delegate = self
     }
@@ -21,12 +19,23 @@ extension TableWithCustomCells : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return 5 }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        cell.nameLabel.text = TableData.data[indexPath.row]
-        cell.detailLabel.text = "Detail Text"
-        cell.imageLabel.backgroundColor = .systemRed
+        let mySwitch = UISwitch()
+        cell.accessoryView = mySwitch
+        
         return cell
     }
+
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "CollectionTableViewController") {
+            vc.navigationItem.title = "CollectionTableViewController"
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+
     
 }
